@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <span class="cart-title">Your bag (2)</span>
+    <button class="cart-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-item">
+    <div class="cart-item-img" style="background:#D3D1C7;">
+      <svg viewBox="0 0 40 48" width="30" fill="none" stroke="#888" stroke-width="1.5">
+        <path d="M10 12 L8 40 L32 40 L30 12 Z"/>
+        <path d="M14 12 C14 8 26 8 26 12"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cart-item-name">Linen Oversized Blazer</div>
+      <div class="cart-item-meta">Size M · Sand</div>
+      <div class="cart-item-price">₹4,299</div>
+    </div>
+  </div>
+  <div class="cart-item">
+    <div class="cart-item-img" style="background:#E1F5EE;">
+      <svg viewBox="0 0 40 48" width="30" fill="none" stroke="#0F6E56" stroke-width="1.5">
+        <path d="M8 18 L8 40 L32 40 L32 18 L20 10 Z"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cart-item-name">Ribbed Knit Dress</div>
+      <div class="cart-item-meta">Size S · Sage</div>
+      <div class="cart-item-price">₹2,799</div>
+    </div>
+  </div>
+  <div class="cart-total">
+    <div class="cart-total-row"><span>Total</span><span>₹7,098</span></div>
+    <button class="checkout-btn">Proceed to checkout</button>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <span class="nav-logo">Shopora</span>
+  <div class="nav-links">
+    <a>New in</a>
+    <a>Women</a>
+    <a>Men</a>
+    <a>Accessories</a>
+    <a>Sale</a>
+  </div>
+  <div class="nav-icons">
+    <button class="icon-btn" onclick="openCart()" style="position:relative;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M6 2 L3 6 L3 20 A2 2 0 0 0 5 22 L19 22 A2 2 0 0 0 21 20 L21 6 L18 2 Z"/>
+        <path d="M16 10 A4 4 0 0 1 8 10"/>
+      </svg>
+      <span class="badge">2</span>
+    </button>
+    <button class="icon-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21 L16.65 16.65"/>
+      </svg>
+    </button>
+    <button class="icon-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-tag">New collection — Spring 2026</div>
+    <h1 class="hero-title">Effortless style,<br>every season.</h1>
+    <p class="hero-sub">Discover curated pieces that blend comfort with contemporary design. Made to last, dressed to impress.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Shop now</button>
+      <button class="btn-secondary">View lookbook</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="fashion.jpg" alt="">
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-title">Featured pieces</span>
+    <a class="see-all">See all →</a>
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" onclick="setFilter(this)">All</button>
+    <button class="filter-btn" onclick="setFilter(this)">Tops</button>
+    <button class="filter-btn" onclick="setFilter(this)">Dresses</button>
+    <button class="filter-btn" onclick="setFilter(this)">Outerwear</button>
+    <button class="filter-btn" onclick="setFilter(this)">Bottoms</button>
+    <button class="filter-btn" onclick="setFilter(this)">Accessories</button>
+  </div>
+  <div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-img" style="background:#F1EFE8;">
+        <span class="sale-badge">SALE</span>
+        <button class="wishlist-btn">♡</button>
+        <svg viewBox="0 0 60 80" fill="none" stroke="#888" stroke-width="1.5">
+          <path d="M15 20 C15 12 45 12 45 20 L50 70 L10 70 Z"/>
+          <path d="M20 20 C20 10 40 10 40 20"/>
+        </svg>
+      </div>
+      <div class="product-name">Linen Oversized Blazer</div>
+      <div class="product-type">Outerwear</div>
+      <div class="product-footer">
+        <div><span class="product-price">₹4,299</span><span class="old-price">₹5,999</span></div>
+        <div class="color-dots">
+          <div class="color-dot" style="background:#D3D1C7;"></div>
+          <div class="color-dot" style="background:#2C2C2A;"></div>
+          <div class="color-dot" style="background:#B5D4F4;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-img" style="background:#E1F5EE;">
+        <button class="wishlist-btn">♡</button>
+        <svg viewBox="0 0 60 80" fill="none" stroke="#0F6E56" stroke-width="1.5">
+          <path d="M12 28 L12 70 L48 70 L48 28 L30 14 Z"/>
+          <path d="M22 70 L22 52 L38 52 L38 70"/>
+        </svg>
+      </div>
+      <div class="product-name">Ribbed Knit Dress</div>
+      <div class="product-type">Dresses</div>
+      <div class="product-footer">
+        <div><span class="product-price">₹2,799</span></div>
+        <div class="color-dots">
+          <div class="color-dot" style="background:#9FE1CB;"></div>
+          <div class="color-dot" style="background:#F4C0D1;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-img" style="background:#FAEEDA;">
+        <button class="wishlist-btn">♡</button>
+        <svg viewBox="0 0 60 80" fill="none" stroke="#854F0B" stroke-width="1.5">
+          <path d="M10 25 L20 15 L30 25 L40 15 L50 25 L50 70 L10 70 Z"/>
+        </svg>
+      </div>
+      <div class="product-name">Striped Cotton Tee</div>
+      <div class="product-type">Tops</div>
+      <div class="product-footer">
+        <div><span class="product-price">₹1,199</span></div>
+        <div class="color-dots">
+          <div class="color-dot" style="background:#FAC775;"></div>
+          <div class="color-dot" style="background:#F1EFE8;"></div>
+          <div class="color-dot" style="background:#AFA9EC;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <div class="product-img" style="background:#EEEDFE;">
+        <span class="new-badge">NEW</span>
+        <button class="wishlist-btn">♡</button>
+        <svg viewBox="0 0 60 80" fill="none" stroke="#534AB7" stroke-width="1.5">
+          <path d="M15 14 L10 70 L50 70 L45 14 Z"/>
+          <path d="M22 14 C22 8 38 8 38 14"/>
+          <path d="M15 32 L45 32"/>
+        </svg>
+      </div>
+      <div class="product-name">Wide Leg Trousers</div>
+      <div class="product-type">Bottoms</div>
+      <div class="product-footer">
+        <div><span class="product-price">₹3,499</span></div>
+        <div class="color-dots">
+          <div class="color-dot" style="background:#CECBF6;"></div>
+          <div class="color-dot" style="background:#2C2C2A;"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="banner-text">
+    <h2>Free shipping on orders over ₹2,000</h2>
+    <p>Easy 30-day returns · Sustainably sourced fabrics</p>
+  </div>
+  <button class="banner-btn">Shop the sale</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-strip">© 2026 MAVE. All rights reserved. · Privacy · Terms · Contact</div>
+
+<script>
+  function openCart() {
+    document.getElementById('cartPanel').classList.add('open');
+    document.getElementById('overlay').classList.add('show');
+  }
+  function closeCart() {
+    document.getElementById('cartPanel').classList.remove('open');
+    document.getElementById('overlay').classList.remove('show');
+  }
+  function setFilter(btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
